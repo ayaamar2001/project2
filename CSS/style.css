@@ -1,0 +1,691 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "pt-sans", sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.main-list {
+    list-style: none;
+    margin: auto;
+}
+
+.main-list i {
+    color: black;
+    font-size: 30px;
+    padding-left: 25px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* .......................................navigation.................................................................. */
+.main-header-content {
+    display: flex;
+    padding: 30px 0;
+}
+
+.main-header-content .main-logo {
+    max-width: 150px;
+    font-size: 33px;
+    font-family: fantasy;
+    font-style: italic;
+}
+
+.main-header-content .main-logo i {
+    color: #368f8b;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.main-header-content nav {
+    flex: 1;
+    text-align: center;
+}
+
+.main-header-content .main-icons {
+    text-align: right;
+    color: #000;
+}
+
+.main-header-content ul li {
+    display: inline-block;
+}
+
+.main-header-content ul li span {
+    font-weight: bold;
+}
+
+.main-header-content .main-link-item {
+    position: relative;
+    padding: 10px 19px;
+    display: block;
+    font-weight: bold;
+    color: #368f8b;
+}
+
+.main-header-content .main-link-item:before,
+.main-header-content .main-link-item:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-style: solid;
+    transition: transform 0.2s;
+}
+
+.main-header-content .main-link-item:before {
+    width: 95%;
+    height: 100%;
+    border-width: 0 2px;
+    transform: scale3d(1, 0, 1);
+}
+
+.main-header-content .main-link-item:hover::before {
+    transform: scale3d(1, 1, 1);
+}
+
+.main-header-content .main-link-item:after {
+    width: 98%;
+    height: 92%;
+    border-width: 2px 0;
+    transform: scale3d(0, 1, 1);
+    transform-origin: left;
+}
+
+.main-header-content .main-link-item:hover::after {
+    transform: scale3d(1, 1, 1);
+    transition-delay: .2s;
+}
+
+.header-content .main-icons ul li {
+    padding: 10px;
+    font-weight: bold;
+}
+
+.main-header-content .main-icons ul .last i {
+    position: relative;
+    margin-right: 14px;
+}
+
+.main-header-content .main-icons ul .last i:after {
+    position: absolute;
+    content: "0";
+    background-color: #368f8b;
+    color: #fff;
+    border-radius: 80%;
+    padding: 5px;
+    font-size: 13px;
+    bottom: -5px;
+}
+
+/* .......................................list-menu.................................................................. */
+.main-list-menu {
+    position: relative;
+}
+
+.main-list-menu-content {
+    position: absolute;
+    width: 450px;
+    border: 2px solid #368f8b;
+    background-color: #fff;
+    padding: 15px;
+    margin-top: 5px;
+    transform: scale(0);
+    transition: transform 0.5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.main-list-menu:hover .main-list-menu-content {
+    transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+}
+
+.main-list-menu-content ul {
+    display: table-cell;
+    text-align: left;
+
+}
+
+.main-list-menu-content ul a {
+    color: #368f8b;
+}
+
+.frist a {
+    display: block;
+    border-bottom: 1px dotted #368f8b;
+    margin-bottom: 10px;
+
+}
+
+.main-list-menu-content ul li {
+    line-height: 30px;
+}
+
+/* .......................................main-img.................................................................. */
+.main-img {
+    width: 100%;
+}
+
+.main-img .container {
+    width: 80%;
+    height: 80vh;
+    background-image: url(../images/main\ \(19\).jpeg);
+    background-position: center -210px;
+    background-size: cover;
+    padding-top: 15%;
+
+}
+
+.main-img .container p {
+    font-size: 23px;
+    color: #368f8b;
+    padding-top: 1%;
+    font-style: italic;
+    text-transform: capitalize;
+    padding-left: 32%;
+    word-spacing: 6%;
+    padding-top: 2%;
+}
+
+.main-img .container .main-titel {
+    font-style: normal;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.main-img .container button {
+    text-transform: capitalize;
+    width: 150px;
+    padding: 8px 0;
+    font-size: 20px;
+    border: none;
+    margin-left: 32%;
+    margin-top: 3%;
+    background-color: #368f8b;
+}
+
+.main-img .container button a {
+    color: white;
+    letter-spacing: 2px;
+}
+
+/* .......................................category.................................................................. */
+.category-container {
+    padding: 5% 0;
+
+}
+
+.head {
+    text-align: center;
+    margin: auto;
+}
+
+.title {
+    font-size: 30px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.line {
+    width: 100px;
+    height: 2px;
+    background-color: #368f8b;
+    margin: auto;
+    margin-top: 8px;
+    transition: width .5s;
+}
+
+.head:hover .line {
+    width: 150px;
+}
+
+.category-items {
+    display: flex;
+    align-items: center;
+    height: 500px;
+}
+
+.category-item {
+    position: relative;
+    width: 24%;
+    margin-left: 1%;
+}
+
+.category-items img {
+    width: 100%;
+    height: 350px;
+    margin-bottom: 25px;
+}
+
+.category-item-subtitle {
+    color: #368f8b;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+.category-item-title {
+    font-size: 19px;
+
+}
+
+.category-item .icon {
+    width: 30px;
+    height: 30px;
+    background-color: #368f8b;
+    display: block;
+    color: #fff;
+    text-align: center;
+    font-size: 22px;
+    line-height: 30px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.category-item:hover .icon {
+    opacity: 1;
+}
+
+/* ......................................category-discount.................................................................. */
+.category-discount {
+    margin: 30px 0;
+    display: flex;
+}
+
+.category-discount-content {
+    flex: 2;
+    background: #dddddd;
+    padding: 20px;
+    position: relative;
+}
+
+.category-discount-item {
+    flex: 1;
+    height: 300px;
+    position: relative;
+}
+
+.discount-item-info {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+
+}
+
+.category-discount-subtitle {
+    color: #368f8b;
+    letter-spacing: 1px;
+}
+
+.discount-item-info h3 {
+    font-weight: normal;
+    color: #368f8b;
+    letter-spacing: 1px;
+}
+
+.discount-item-info h2 {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.category-discount-item {
+    background-image: url(../images/discount1.jpeg);
+    background-position: center;
+    background-size: cover;
+    margin: 0 20px;
+    transition: transform 0.5s;
+}
+
+.category-discount-item:hover {
+    transform: scale(1.1);
+}
+
+.category-discount-content .category-text {
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 20px;
+}
+
+.category-discount-content .category-text .icon {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    font-size: 43px;
+    color: #368f8b;
+}
+
+.category-discount-content p {
+    line-height: 30px;
+}
+
+.category-discount-content .category-lines span {
+    display: inline-block;
+    width: 50px;
+    height: 2px;
+    background: #368f8b;
+    margin-left: 10px;
+}
+
+.category-discount-content .category-lines {
+    text-align: right;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+.des {
+    margin-left: 1px;
+    background-image: url(../images/discount2.jpeg);
+    background-position: center;
+    background-size: cover;
+    transition: transform .5s;
+}
+
+.category-discount-item:hover {
+    transform: scale(1.1);
+}
+
+/* ......................................Category-feature.................................................................. */
+.Category-feature {
+    display: flex;
+    margin-bottom: 60px;
+}
+
+.Category-feature-item {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #368f8b;
+}
+
+.fet {
+    border: 0;
+}
+
+.Category-feature-info h3 {
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+.Category-feature-info span {
+    color: #7b807f;
+    font-size: 15px;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.Category-feature-icon {
+    background-image: url(../images/service-icon.png);
+    height: 55px;
+    background-repeat: no-repeat;
+}
+
+.Category-feature-icon-1 {
+    background-position: center 5px;
+    transition: all .5s;
+}
+
+.Category-feature-item:hover .Category-feature-icon-1 {
+    background-position: center -86px;
+}
+
+.Category-feature-icon-2 {
+    background-position: center -180px;
+    transition: all .5s;
+}
+
+.Category-feature-item:hover .Category-feature-icon-2 {
+    background-position: center -273px;
+}
+
+.Category-feature-icon-3 {
+    background-position: center -366px;
+    transition: all .5s;
+}
+
+.Category-feature-item:hover .Category-feature-icon-3 {
+    background-position: center -455px;
+}
+
+.Category-feature-icon-4 {
+    background-position: center -549px;
+    transition: all .5s;
+}
+
+.Category-feature-item:hover .Category-feature-icon-4 {
+    background-position: center -639px;
+}
+
+.Category-feature-icon-5 {
+    background-position: center -734px;
+    transition: all .5s;
+}
+
+.Category-feature-item:hover .Category-feature-icon-5 {
+    background-position: center -826px;
+}
+
+/* .....................................product.................................................................. */
+.list-product {
+    display: flex;
+    justify-content: center;
+}
+
+.list-product li {
+    margin: 20px 20px;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.list-product li:hover {
+    scale: 1.2;
+}
+
+.products-items {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 520px;
+    margin: 20px 0px;
+}
+
+.product-item {
+    position: relative;
+    width: 31%;
+    margin-left: 2%;
+}
+
+.product-img img {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.product-overlay {
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scalex(0);
+    opacity: 0.9;
+    transition: transform 0.2s;
+}
+
+.product-item:hover .product-overlay {
+    transform: scalex(1);
+}
+
+.product-overlay ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.product-overlay ul li {
+    width: 30px;
+    height: 30px;
+    background-color: #368f8b;
+    display: inline-block;
+    text-align: center;
+}
+
+.product-overlay ul li:hover {
+    transform: scale(1.2);
+}
+
+.product-overlay ul li i {
+    color: #fff;
+    line-height: 30px;
+}
+
+.product-item .active {
+    color: #368f8b;
+}
+
+.product-info span {
+    display: block;
+    margin: 5px 0;
+    letter-spacing: 1px;
+}
+
+.product-overlay .main-list i {
+    padding-left: 2px;
+    font-size: 20px;
+}
+
+/* ............................................footer................................................................. */
+.contact-container {
+    margin: auto;
+    width: 100%;
+    height: 50vh;
+    background-color: #000;
+
+}
+
+.contact {
+    margin-top: 3%;
+    padding-top: 5%;
+    display: flex;
+    justify-items: center;
+}
+
+.contact-list {
+    display: flex;
+    margin-left: 80%;
+}
+
+.contact-list li {
+    margin: 15px 15px;
+}
+
+.contact-list li:hover {
+    transform: scale(1.2);
+
+}
+
+.contact-list li i {
+    font-size: 20px;
+    color: #565757;
+
+
+}
+
+.contact-list li i:hover {
+    color: #368f8b;
+}
+
+.contact-email {
+    color: #fff;
+    width: 40%;
+    height: 50px;
+    border: 1px solid #565757;
+    margin-left: 3%;
+    padding: 12px 20px;
+    position: relative;
+    margin-left: 20%;
+}
+
+.title {
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-left: 10px;
+    padding-right: 20px;
+    border-right: 1px solid #565757;
+}
+
+.contact-email input {
+    padding-left: 20px;
+    font-size: 16px;
+    background-color: #000;
+    border: none;
+}
+
+.contact-email .icon {
+    border-left: 1px solid #565757;
+    color: #565757;
+    position: absolute;
+    right: 0px;
+    bottom: 5px;
+    margin-right: 8px;
+    padding: 12px 14px;
+}
+
+.contact-email .icon:hover {
+    transform: scale(1.2);
+    color: #368f8b;
+
+}
+
+.contact-items {
+    margin-left: 30%;
+
+}
+
+.contact-items ul {
+    margin-top: 8%;
+    display: flex;
+}
+
+.contact-items li {
+    margin-left: 5%;
+}
+
+.contact-items li a {
+    color: #565757;
+
+}
+
+.contact-items li a:hover {
+    color: #368f8b;
+
+}
+
+.contact-items li:hover {
+    transform: scale(1.1);
+}
+
+.contact-container p {
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid #565757;
+    color: #565757;
+    text-align: center;
+    padding: 30px;
+}
